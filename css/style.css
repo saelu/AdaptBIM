@@ -227,6 +227,10 @@ a:focus,
 .intro .overlay {
   background: rgba(0, 0, 0, 0.2);
 }
+
+.intro .aec {
+  color: #FF8C42;
+}
 .intro h1 {
   font-family: "Raleway", sans-serif;
   color: #fff;
