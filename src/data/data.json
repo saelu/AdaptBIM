@@ -1,0 +1,158 @@
+{
+  "Header": {
+    "title": "Your Vision, Our Code",
+    "paragraph": "Revolutionizing AEC & EPC with intelligent, customized BIM solutions that boost productivity and provide unparalleled digital visibility on your projects."
+  },
+  "About": {
+    "paragraph": "This section introduces AdaptBIM, a dynamic new force in AEC/EPC technology. While the company is new, our strength is our team of seasoned professionals. We focus on empowering your projects with higher productivity and enhanced digital visibility, turning your vision into constructible reality.",
+    "Why": [
+      "Data Silos & Disconnected Info",
+      "Manual, Repetitive Tasks",
+      "Project Delays & Rework",
+      "Lack of Project Visibility"
+    ],
+    "Why2": [
+      "Inefficient Collaboration",
+      "Suboptimal Software Use"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-cubes",
+      "name": "BIM Solutions",
+      "text": "Building robust digital foundations for projects with intelligent 3D modeling, coordination, and data-rich outputs."
+    },
+    {
+      "icon": "fa fa-puzzle-piece",
+      "name": "Software Customization",
+      "text": "Developing bespoke tools, components, and automation frameworks tailored to your specific workflows."
+    },
+    {
+      "icon": "fa fa-link",
+      "name": "Integration Servicesr",
+      "text": "Ensuring seamless data flow between BIM, PowerBI, Excel, and ERP systems for holistic project visibility."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"AdaptBIM brought clarity and efficiency to our project like never before. Their team's expertise made digital integration seamless.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"Thanks to AdaptBIM, we boosted our productivity and had full visibility across the board. A game-changer for our workflows\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"Their seasoned professionals truly understand the AEC/EPC space. We felt confident from day one through to delivery.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"With AdaptBIM, our complex plans became constructible realities. Smart, reliable, and forward-thinking every step of the way.\"",
+      "name": "Johnathan Doe"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address1": "123 Tech Park, Bangalore, India",
+    "address2": "456 Innovation Hub, Dubai, UAE",
+    "phone": "+1 123 456 1234",
+    "email": "support@adaptbim.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-shield",
+      "title": "Proven Expertise",
+      "text": "Our professionals bring over 15 years of hands-on experience in Tekla Structures, AutoCAD, AVEVA E3D, and Bocad."
+    },
+    {
+      "icon": "fa fa-cogs",
+      "title": "Agile & Innovative",
+      "text": "As a new company, we are nimble, unburdened by legacy systems, and focused on delivering cutting-edge solutions."
+    },
+    {
+      "icon": "fa fa-compass",
+      "title": "Targeted Solutions",
+      "text": "We specialize in deep software customization and integration for AEC & EPC clients, solving your most complex challenges."
+    },
+    {
+      "icon": "fa fa-globe",
+      "title": "Global Reach",
+      "text": "Based in India and the UAE, we are strategically positioned to serve a global clientele with local understanding."
+    }
+  ]
+}
