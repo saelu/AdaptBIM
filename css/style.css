@@ -74,9 +74,18 @@ hr {
 #menu {
   padding: 15px;
   transition: all 0.8s;
+
+}
+#menu p{
+   color: #FFFFFF;
+
+}
+#menu .text-bim{
+ color: #FF8C42;
+
 }
 #menu.navbar-default {
-  background-color: #fff;
+  background-color: #0A2342;
   border-color: rgba(231, 231, 231, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
@@ -84,13 +93,13 @@ hr {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #333;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
-  color: #555;
+  color: #FFFFFF;
   font-size: 15px;
   font-weight: 400;
   padding: 8px 2px;
@@ -225,7 +234,7 @@ a:focus,
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 60px;
 }
 .intro h1 span {
   font-weight: 800;
@@ -325,10 +334,11 @@ header .intro-text {
   padding: 0;
   text-align: center;
 }
-/* Services Section */
+/* Services Section  background-color: #0A2342; */
 #services {
   padding: 100px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  
+   background:linear-gradient(to right, #0A2342 36%, #606C7E 70%);
   color: #fff;
 }
 #services .service-desc {
@@ -493,7 +503,7 @@ header .intro-text {
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #0A2342 36%, #606C7E 70%);
   color: rgba(255, 255, 255, 0.75);
 }
 #contact .section-title {
