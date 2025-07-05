@@ -5,7 +5,8 @@ export const Services = (props) => {
     <div id="services" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Our Services</h2>
+          <h2>Solutions</h2>
+          <h3>Boosting Productivity, Enhancing Digital Visibility</h3>
           <p>
             We specialize in empowering clients within the Engineering, Procurement, and Construction (EPC) and Architecture, Engineering, and Construction (AEC) sectors. Our core focus is to significantly enhance project productivity and elevate digital visibility across their operations. 
             Our comprehensive solutions are meticulously engineered to streamline workflows, optimize processes, and deliver clear, actionable insights for your projects. To explore how our specialized solutions can benefit your organization, please click on each solution for more detailed information.
