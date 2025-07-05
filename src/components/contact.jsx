@@ -109,10 +109,6 @@ export const Contact = (props) => {
                   <b>India Office</b> 
                     <p>{props.data ? props.data.address1 : "loading"}</p>
                      </div>
-                <div>
-                   <b>UAE Office</b>
-                    <p>{props.data ? props.data.address2 : "loading"}</p>
-                     </div>
               </p>
             </div>
             <div className="contact-item">
@@ -160,7 +156,7 @@ export const Contact = (props) => {
       <div id="footer">
         <div className="container text-center">
           <p>
-            &copy; 2025 AdaptBIM. All Rights Reserved.Your Vision, Our Code.{" "}
+            &copy; 2025 AdaptBIM. All Rights Reserved.{" "}
           </p>
         </div>
       </div>
