@@ -42,10 +42,10 @@ export const Contact = (props) => {
           <div className="col-md-8">
             <div className="row">
               <div className="section-title">
-                <h2>Let's Build the Future, Together</h2>
+                <h2>Get in Touch</h2>
                 <p>
-                 Ready to transform your projects? Reach out to us to discuss your challenges and learn how our bespoke BIM solutions can boost your productivity and digital visibility.
-                We welcome inquiries from around the world.
+                Ready to transform your vision into code and elevate your project capabilities? 
+                Contact AdaptBIM today to discuss how our tailored solutions can empower your next project.
                 </p>
               </div>
               <form name="sentMessage" validate onSubmit={handleSubmit}>

@@ -1,19 +1,19 @@
 {
   "Header": {
-    "title": "Your Vision, Our Code",
-    "paragraph": "Revolutionizing AEC & EPC with intelligent, customized BIM solutions that boost productivity and provide unparalleled digital visibility on your projects."
+    "title": "Empowering AEC and EPC with our Tailored BIM Solutions",
+    "paragraph": "Your Vision, Our Code"
   },
   "About": {
-    "paragraph": "This section introduces AdaptBIM, a dynamic new force in AEC/EPC technology. While the company is new, our strength is our team of seasoned professionals. We focus on empowering your projects with higher productivity and enhanced digital visibility, turning your vision into constructible reality.",
+    "paragraph": "AdaptBIM was established with a comprehensive understanding of the evolving needs and challenges within the Architecture, Engineering, Construction (AEC), and Engineering, Procurement, and Construction (EPC) sectors. Our founding principle is to harness our extensive expertise in BIM software customization to develop unparalleled, tailored solutions. These solutions are specifically designed to reduce project costs, enhance productivity, and empower businesses with advanced digital capabilities. Our team possesses a collective experience exceeding 15 years, ensuring that every solution delivered is crafted with the highest degree of precision and industry insight. Currently, AdaptBIM is strategically positioned in India, enabling us to efficiently serve clients globally and bring our specialized expertise directly to your operations, wherever you may be."
+  },
+   "Testimonials": {
     "Why": [
-      "Data Silos & Disconnected Info",
-      "Manual, Repetitive Tasks",
-      "Project Delays & Rework",
-      "Lack of Project Visibility"
-    ],
-    "Why2": [
-      "Inefficient Collaboration",
-      "Suboptimal Software Use"
+      "Boost their project productivity.",
+      "Enhance project estimation, fabrication and traceability.",
+      "Addressing challanges like traceability of weld consumable, fireproofing material.",
+      "Automating data extraction and streamlining report creation.",
+      "Gain more digital visibility on their projects.",
+      "Leverage advanced software solutions for competitive advantage."
     ]
   },
   "Gallery": [
@@ -66,21 +66,36 @@
   "Services": [
     {
       "icon": "fa fa-cubes",
-      "name": "BIM Solutions",
-      "text": "Building robust digital foundations for projects with intelligent 3D modeling, coordination, and data-rich outputs."
+      "name": "BIM Customization & Automation",
+      "text": "We customize and automate repetitive tasks and complex processes within your BIM workflows in various BIM platforms to save time, reduce errors, and accelerate project delivery."
     },
     {
       "icon": "fa fa-puzzle-piece",
-      "name": "Software Customization",
-      "text": "Developing bespoke tools, components, and automation frameworks tailored to your specific workflows."
+      "name": "Consulting & Implementation",
+      "text": "Guiding you through the adoption and optimization of BIM processes, from initial setup to advanced application, ensuring a smooth digital transformation."
     },
     {
       "icon": "fa fa-link",
-      "name": "Integration Servicesr",
-      "text": "Ensuring seamless data flow between BIM, PowerBI, Excel, and ERP systems for holistic project visibility."
+      "name": "Custom Tekla Structures Development",
+      "text": "Tailored add-ons, tools, and extensions designed to meet your unique project requirements and enhance Tekla's capabilities."
+    },
+    {
+      "icon": "fa fa-link",
+      "name": "Engineering Services Integration",
+      "text": "Providing support for precise 3D modeling, detailing, and coordination that leverages the full potential of BIM for all stages of your project."
+    },
+    {
+      "icon": "fa fa-link",
+      "name": "Digital Transformation Strategies",
+      "text": "Helping you integrate advanced digital tools and methodologies to achieve comprehensive project oversight and data-driven decision-making."
+    },
+    {
+      "icon": "fa fa-link",
+      "name": "Training & Support",
+      "text": "Empowering your team with the knowledge and skills needed to master our customized solutions and maximize your investment in BIM technologies."
     }
   ],
-  "Testimonials": [
+  "Testimonials1": [
     {
       "img": "img/testimonials/01.jpg",
       "text": "\"AdaptBIM brought clarity and efficiency to our project like never before. Their team's expertise made digital integration seamless.\"",
@@ -136,13 +151,13 @@
   "Features": [
     {
       "icon": "fa fa-shield",
-      "title": "Proven Expertise",
-      "text": "Our professionals bring over 15 years of hands-on experience in Tekla Structures, AutoCAD, AVEVA E3D, and Bocad."
+      "title": "Unmatched Expertise",
+      "text": "Benefit from over 15 years of specialized experience in BIM software customization."
     },
     {
       "icon": "fa fa-cogs",
-      "title": "Agile & Innovative",
-      "text": "As a new company, we are nimble, unburdened by legacy systems, and focused on delivering cutting-edge solutions."
+      "title": "Tailored Innovation",
+      "text": "We don't just offer solutions; we craft them to fit your precise needs, ensuring maximum impact and efficiency."
     },
     {
       "icon": "fa fa-compass",
@@ -151,8 +166,18 @@
     },
     {
       "icon": "fa fa-globe",
-      "title": "Global Reach",
-      "text": "Based in India and the UAE, we are strategically positioned to serve a global clientele with local understanding."
+      "title": "Global Vision, Local Presence",
+      "text": "With operations in India we combine international standards with localized understanding."
+    },
+    {
+      "icon": "fa fa-globe",
+      "title": "Productivity-Driven Results",
+      "text": "Our focus is on delivering tangible results that enhance your project's productivity and digital transparency."
+    },
+    {
+      "icon": "fa fa-globe",
+      "title": "Your Partner in Digital Evolution",
+      "text": "We are committed to being your trusted partner in navigating the complexities of digital transformation in construction."
     }
   ]
 }
