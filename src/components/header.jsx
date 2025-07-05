@@ -14,13 +14,13 @@ export const Header = (props) => {
                   <span className="aec"> BIM</span> Solutions
                   <span></span>
                 </h1>
-               
+{/*                
                 <a
                   href="#features"
                   className="btn btn-custom btn-lg page-scroll"
                 >
                   Learn More
-                </a>{" "}
+                </a>{" "} */}
               </div>
             </div>
           </div>

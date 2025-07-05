@@ -161,7 +161,7 @@ hr {
 .section-title h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background:  linear-gradient(to right, #0A2342 0%, #606C7E 55%);;
   height: 4px;
   width: 60px;
   bottom: 0;
@@ -175,8 +175,8 @@ hr {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   color: #fff;
-  background-color: #5ca9fb;
-  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background: linear-gradient(to right, #0A2342 0%, #606C7E 55%);
+  background-image: linear-gradient(to right, #0A2342 0%, #606C7E 55%);
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
@@ -193,7 +193,7 @@ hr {
 .btn-custom.active {
   color: #fff;
   background-image: none;
-  background-color: #6372ff;
+  background-color:  linear-gradient(to right, #0A2342 0%, #606C7E 100%);;
 }
 .btn:active,
 .btn.active {
@@ -275,7 +275,7 @@ header .intro-text {
   height: 100px;
   padding: 30px 0;
   border-radius: 50%;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #0A2342 0%, #606C7E 55%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
 /* About Section */
@@ -341,7 +341,6 @@ header .intro-text {
 /* Services Section  background-color: #0A2342; */
 #services {
   padding: 100px 0;
-  
    background:linear-gradient(to right, #0A2342 36%, #606C7E 70%);
   color: #fff;
 }
@@ -367,11 +366,12 @@ header .intro-text {
   width: 120px;
   height: 120px;
   padding: 40px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #0A2342 0%, #606C7E 55%);
   border-radius: 50%;
   color: #fff;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
+
 #services h3 {
   font-weight: 500;
   padding: 5px 0;
