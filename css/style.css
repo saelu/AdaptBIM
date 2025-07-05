@@ -221,7 +221,7 @@ a:focus,
 .intro h1 {
   font-family: "Raleway", sans-serif;
   color: #fff;
-  font-size: 82px;
+  font-size: 24 px;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
@@ -229,7 +229,12 @@ a:focus,
 }
 .intro h1 span {
   font-weight: 800;
-  color: #5ca9fb;
+  color: #fff;
+}
+.intro h3 {
+  font-weight: 800;
+  color: #F8F8F8;
+  margin-bottom: 60px;
 }
 .intro p {
   color: #fff;
@@ -242,7 +247,7 @@ a:focus,
 header .intro-text {
   padding-top: 350px;
   padding-bottom: 200px;
-  text-align: center;
+  text-align: right;
 }
 /* Features Section */
 #features {
@@ -318,6 +323,7 @@ header .intro-text {
 }
 #services h2 {
   color: #fff;
+
 }
 #services .section-title h2::after {
   position: absolute;
@@ -408,6 +414,20 @@ header .intro-text {
   color: #e6e6e6;
   font-size: 32px;
   margin-bottom: 20px;
+}
+#testimonials .about-text li {
+  margin-bottom: 6px;
+  margin-left: 6px;
+  list-style: none;
+  padding: 0;
+}
+#testimonials .about-text li:before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  color: #5ca9fb;
+  font-size: 11px;
+  font-weight: 300;
+  padding-right: 8px;
 }
 .testimonial {
   position: relative;
