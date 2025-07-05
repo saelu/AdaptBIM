@@ -294,9 +294,9 @@ header .intro-text {
 #about h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background:  linear-gradient(to right, #0A2342 0%, #606C7E 55%);
   height: 4px;
-  width: 60px;
+  width: 100%;
   bottom: 0;
   left: 0;
 }
@@ -329,6 +329,7 @@ header .intro-text {
 /* Welcome Section */
 #welcome {
   padding: 100px 0;
+  
 }
 
 #welcome .welcome-text {
