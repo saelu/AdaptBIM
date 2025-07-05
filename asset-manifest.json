@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/AdaptBIM/static/css/main.ae42ac5f.css",
-    "main.js": "/AdaptBIM/static/js/main.fda7742b.js",
+    "main.js": "/AdaptBIM/static/js/main.b3205abd.js",
     "index.html": "/AdaptBIM/index.html",
     "main.ae42ac5f.css.map": "/AdaptBIM/static/css/main.ae42ac5f.css.map",
-    "main.fda7742b.js.map": "/AdaptBIM/static/js/main.fda7742b.js.map"
+    "main.b3205abd.js.map": "/AdaptBIM/static/js/main.b3205abd.js.map"
   },
   "entrypoints": [
     "static/css/main.ae42ac5f.css",
-    "static/js/main.fda7742b.js"
+    "static/js/main.b3205abd.js"
   ]
 }
