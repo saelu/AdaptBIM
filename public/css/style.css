@@ -4,8 +4,9 @@
   /* --rgb:rgba(255,255,255,0.05); */
   --rgb: #606C7E;
   --primary: #1a57a2;
-  --primary-light: #606C7E;
+  --primary-light: #6c757D;
   --accent: #FF8C42;
+  --accent-2: #00BFB2;
   --accent-blue: #608dfd;
   --accent-blue2: #6372ff;
   --accent-blue3: #5ca9fb;
@@ -80,13 +81,14 @@ h2,
 h3,
 h4 {
   font-family: var(--font-heading);
+  color: var(--primary);
 }
 h2 {
   text-transform: uppercase;
   margin: 0 0 20px;
   font-weight: 800;
   font-size: var(--font-size-h1);
-  color: var(--text-dark);
+  color: var(--primary);
 }
 h3 {
   font-size: var(--font-size-h3);
@@ -204,8 +206,8 @@ hr {
 }
 .custom-navbar-desktop li > a:hover,
 .custom-navbar-desktop li > a:focus {
-  color: var(--primary);
-  background: var(--rgb);
+  color: var(--accent);
+  /* background: var(--rgb); */
 }
 .custom-navbar-desktop li > a:after {
   content: '';
@@ -282,8 +284,8 @@ hr {
 }
 .custom-navbar-mobile-list li > a:hover,
 .custom-navbar-mobile-list li > a:focus {
-  color: var(--primary);
-  background: var(--rgb);
+  color: var(--accent);
+  /* background: var(--rgb); */
 }
 .custom-navbar-mobile-list li > a:after {
   content: '';
@@ -598,6 +600,9 @@ header .intro-text {
 #features h2{
   padding-top: 25px;
 }
+#features h3{
+  color: var(--accent);
+}
 #features i.fa {
   font-size: var(--font-size-hero);
   margin-bottom: 20px;
@@ -690,8 +695,6 @@ header .intro-text {
 }
 #services h2 {
   color: var(--text-white);
-  font-family: var(--font-heading);
-  font-size: var(--font-size-h2);
 }
 #services .section-title h2::after {
   /* Removed the line under Solutions */
@@ -721,7 +724,7 @@ header .intro-text {
   font-weight: 500;
   padding: 5px 0;
   color: var(--text-white);
-  font-size: var(--font-size-xl);
+  /* font-size: var(--font-size-xl); */
 }
 #services p {
   color: var(--text-white-75);
@@ -803,7 +806,7 @@ header .intro-text {
 #testimonials .about-text li:before {
   content: "\f00c";
   font-family: var(--font-icon);
-  color: var(--accent-blue3);
+  color: var(--primary);
   font-size: var(--font-size-sm);
   font-weight: 300;
   padding-right: 8px;
@@ -1601,8 +1604,8 @@ label {
 }
 .custom-navbar-desktop li > a:hover,
 .custom-navbar-mobile li > a:hover {
-  color: var(--primary);
-  background: var(--rgb);
+  color: var(--accent);
+  /* background: var(--rgb); */
 }
 .custom-navbar-desktop li > a:after,
 .custom-navbar-mobile li > a:after {
