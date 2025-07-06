@@ -119,8 +119,8 @@ export const Navigation = () => {
         <div className="navbar-brand-container">
           <a href="#page-top" className="navbar-brand page-scroll">
             <picture>
-              <source media="(max-width: 575px)" srcSet="img/logo-small.png" />
-              <source media="(max-width: 991px)" srcSet="img/logo-medium.png" />
+              <source media="(max-width: 575px)" srcSet="img/logo-large.png" />
+              <source media="(max-width: 991px)" srcSet="img/logo-large.png" />
               <source media="(min-width: 992px)" srcSet="img/logo-large.png" />
               <img src="img/logo-large.png" alt="AdaptBIM Logo" className="navbar-logo" />
             </picture>
