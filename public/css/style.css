@@ -600,8 +600,13 @@ header .intro-text {
 #features h2{
   padding-top: 25px;
 }
-#features h3{
+#features h3 {
   color: var(--accent);
+  min-height: 56px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
 }
 #features i.fa {
   font-size: var(--font-size-hero);
@@ -723,7 +728,7 @@ header .intro-text {
 #services h3 {
   font-weight: 500;
   padding: 5px 0;
-  color: var(--text-white);
+  color: var(--accent);
   /* font-size: var(--font-size-xl); */
 }
 #services p {
