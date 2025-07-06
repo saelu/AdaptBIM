@@ -105,6 +105,7 @@ h5 {
 }
 p {
   font-size: var(--font-size-p);
+  text-align: justify;
 }
 p.intro {
   margin: 12px 0 0;
@@ -658,6 +659,7 @@ header .intro-text {
 #about p {
   line-height: 24px;
   margin: 30px 0;
+  text-align: justify;
 }
 
 /* Welcome Section */
@@ -672,6 +674,11 @@ header .intro-text {
   padding: 0;
   text-align: center;
 }
+
+#welcome .welcome-text p {
+  text-align: justify;
+}
+
 /* Services Section  background-color: #0A2342; */
 #services {
   padding: 30px 0;
@@ -719,6 +726,7 @@ header .intro-text {
 #services p {
   color: var(--text-white-75);
   font-size: var(--font-size-p);
+  text-align: justify;
 }
 #services .service-desc {
   margin-bottom: 40px;
@@ -779,6 +787,7 @@ header .intro-text {
 }
 #testimonials p {
   font-size: var(--font-size-p);
+  text-align: justify;
 }
 #testimonials i {
   color: var(--gray-light);
@@ -857,6 +866,7 @@ header .intro-text {
 }
 #contact p {
   font-size: var(--font-size-p);
+  text-align: justify;
 }
 #contact .section-title {
   margin-bottom: 40px;
@@ -1238,6 +1248,10 @@ label {
   
   #welcome .welcome-text {
     padding: 0;
+  }
+  
+  #welcome .welcome-text p {
+    text-align: justify;
   }
   
   #services {
@@ -1644,6 +1658,14 @@ label {
 #testimonials ol,
 #testimonials li {
   font-size: var(--font-size-p);
+}
+
+#about p,
+#services p,
+#testimonials p,
+#contact p,
+.feature-box p {
+  text-align: justify;
 }
 
 
