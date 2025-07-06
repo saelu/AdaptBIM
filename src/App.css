@@ -1,18 +1,106 @@
+/* All colors are managed via CSS variables in :root in public/css/style.css */
+/* All font families and font sizes are managed via CSS variables in :root in public/css/style.css */
+
+/* Additional responsive adjustments for React components */
+
+/* Ensure proper viewport handling */
 @media screen and (max-width: 400px) {
-  #features {
-    padding: 20px;
-    width: 111%;
-  }
+  #features,
   #about,
   #services,
   #testimonials,
   #team,
   #contact,
   #footer {
-    width: 111%;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   #portfolio {
-    width: 110%;
+    width: 100%;
+  }
+}
+
+/* Ensure React components are properly responsive */
+@media (max-width: 767px) {
+  /* Ensure all React components use proper Bootstrap grid */
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Fix any potential overflow issues */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Ensure proper spacing for React components */
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (max-width: 575px) {
+  /* Ensure all clickable elements are touch-friendly */
+  a, button, input, textarea, select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve form usability on mobile */
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+  
+  /* Ensure proper spacing for mobile navigation */
+  .navbar-nav > li > a {
+    padding: 15px !important;
+  }
+  
+  /* Improve touch targets for navigation */
+  .navbar-nav > li > a {
+    padding: 15px 20px !important;
+    margin: 0 !important;
+  }
+  
+  /* Ensure proper spacing for mobile */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Improve readability on small screens */
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Ensure smooth scrolling works on mobile */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Improve button accessibility on mobile */
+  .btn-custom {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
   }
 }

@@ -19,127 +19,36 @@
       "Leverage advanced software solutions for competitive advantage."
     ]
   },
-  "Gallery": [
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/01-large.jpg",
-      "smallImage": "img/portfolio/01-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/02-large.jpg",
-      "smallImage": "img/portfolio/02-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/06-large.jpg",
-      "smallImage": "img/portfolio/06-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
-    }
-  ],
   "Services": [
     {
-      "icon": "fa fa-cubes",
+      "icon": "fa fa-cogs",
       "name": "BIM Customization & Automation",
       "text": "We customize and automate repetitive tasks and complex processes within your BIM workflows in various BIM platforms to save time, reduce errors, and accelerate project delivery."
     },
     {
-      "icon": "fa fa-puzzle-piece",
+      "icon": "fa fa-comments",
       "name": "Consulting & Implementation",
       "text": "Guiding you through the adoption and optimization of BIM processes, from initial setup to advanced application, ensuring a smooth digital transformation."
     },
     {
-      "icon": "fa fa-link",
+      "icon": "fa fa-cube",
       "name": "Custom Tekla Structures Development",
       "text": "Tailored add-ons, tools, and extensions designed to meet your unique project requirements and enhance Tekla's capabilities."
     },
     {
-      "icon": "fa fa-link",
+      "icon": "fa fa-project-diagram",
       "name": "Engineering Services Integration",
       "text": "Providing support for precise 3D modeling, detailing, and coordination that leverages the full potential of BIM for all stages of your project."
     },
     {
-      "icon": "fa fa-link",
+      "icon": "fa fa-digital-tachograph",
       "name": "Digital Transformation Strategies",
       "text": "Helping you integrate advanced digital tools and methodologies to achieve comprehensive project oversight and data-driven decision-making."
     },
     {
-      "icon": "fa fa-link",
+      "icon": "fa fa-chalkboard-teacher",
       "name": "Training & Support",
       "text": "Empowering your team with the knowledge and skills needed to master our customized solutions and maximize your investment in BIM technologies."
-    }
-  ],
-  "Testimonials1": [
-    {
-      "img": "img/testimonials/01.jpg",
-      "text": "\"AdaptBIM brought clarity and efficiency to our project like never before. Their team's expertise made digital integration seamless.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/02.jpg",
-      "text": "\"Thanks to AdaptBIM, we boosted our productivity and had full visibility across the board. A game-changer for our workflows\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/03.jpg",
-      "text": "\"Their seasoned professionals truly understand the AEC/EPC space. We felt confident from day one through to delivery.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/04.jpg",
-      "text": "\"With AdaptBIM, our complex plans became constructible realities. Smart, reliable, and forward-thinking every step of the way.\"",
-      "name": "Johnathan Doe"
-    }
-  ],
-  "Team": [
-    {
-      "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
-    },
-    {
-      "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
     }
   ],
   "Contact": {
@@ -153,7 +62,7 @@
   },
   "Features": [
     {
-      "icon": "fa fa-shield",
+      "icon": "fa fa-award",
       "title": "Unmatched Expertise",
       "text": "Benefit from over 15 years of specialized experience in BIM software customization."
     },
@@ -163,7 +72,7 @@
       "text": "We don't just offer solutions; we craft them to fit your precise needs, ensuring maximum impact and efficiency."
     },
     {
-      "icon": "fa fa-compass",
+      "icon": "fa fa-bullseye",
       "title": "Targeted Solutions",
       "text": "We specialize in deep software customization and integration for AEC & EPC clients, solving your most complex challenges."
     },
@@ -173,12 +82,12 @@
       "text": "With operations in India we combine international standards with localized understanding."
     },
     {
-      "icon": "fa fa-globe",
+      "icon": "fa fa-chart-line",
       "title": "Productivity-Driven Results",
       "text": "Our focus is on delivering tangible results that enhance your project's productivity and digital transparency."
     },
     {
-      "icon": "fa fa-globe",
+      "icon": "fa fa-handshake",
       "title": "Your Partner in Digital Evolution",
       "text": "We are committed to being your trusted partner in navigating the complexities of digital transformation in construction."
     }
