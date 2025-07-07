@@ -9,7 +9,6 @@
   #about,
   #services,
   #testimonials,
-  #team,
   #contact,
   #footer {
     width: 100%;
@@ -17,9 +16,7 @@
     padding-right: 15px;
   }
 
-  #portfolio {
-    width: 100%;
-  }
+
 }
 
 /* Ensure React components are properly responsive */
