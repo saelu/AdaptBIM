@@ -1,16 +1,14 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
-import { emailjsConfig } from "../config/emailjs";
 
 const initialState = {
   name: "",
   email: "",
-  subject: "",
   message: "",
 };
 export const Contact = (props) => {
-  const [{ name, email, subject, message }, setState] = useState(initialState);
+  const [{ name, email, message }, setState] = useState(initialState);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
 
   const handleChange = (e) => {
@@ -25,13 +23,15 @@ export const Contact = (props) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, subject, message);
+    console.log(name, email, message);
     
     // Reset status and show loading state
     setSubmitStatus(null);
     
-    // EmailJS configuration from config file
-    const { serviceId, templateId, publicKey } = emailjsConfig;
+    // EmailJS configuration - use environment variables for security
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_jbb8wu8";
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_pgar37o";
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "wtCU0YeO5FP66Tk2J";
     
     emailjs
       .sendForm(serviceId, templateId, e.target, publicKey)
@@ -39,12 +39,7 @@ export const Contact = (props) => {
         (result) => {
           console.log("Email sent successfully:", result.text);
           setSubmitStatus('success');
-          setState({ ...initialState }); // Clear form without resetting status
-          
-          // Auto-hide success message after 5 seconds
-          setTimeout(() => {
-            setSubmitStatus(null);
-          }, 5000);
+          clearState();
         },
         (error) => {
           console.log("Email send failed:", error.text);
@@ -75,7 +70,6 @@ export const Contact = (props) => {
                         name="name"
                         className="form-control"
                         placeholder="Full Name"
-                        value={name}
                         required
                         onChange={handleChange}
                       />
@@ -90,24 +84,6 @@ export const Contact = (props) => {
                         name="email"
                         className="form-control"
                         placeholder="Email"
-                        value={email}
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-xs-12">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        className="form-control"
-                        placeholder="Subject"
-                        value={subject}
                         required
                         onChange={handleChange}
                       />
@@ -122,7 +98,6 @@ export const Contact = (props) => {
                     className="form-control"
                     rows="4"
                     placeholder="Message"
-                    value={message}
                     required
                     onChange={handleChange}
                   ></textarea>
@@ -139,14 +114,6 @@ export const Contact = (props) => {
                 <div className="alert alert-success mt-3" role="alert">
                   <i className="fa fa-check-circle me-2"></i>
                   Thank you for connecting with us! We will respond to your query ASAP.
-                  <button 
-                    type="button" 
-                    className="btn-close" 
-                    onClick={() => setSubmitStatus(null)}
-                    aria-label="Close"
-                  >
-                    <i className="fa fa-times"></i>
-                  </button>
                 </div>
               )}
               
@@ -154,14 +121,6 @@ export const Contact = (props) => {
                 <div className="alert alert-danger mt-3" role="alert">
                   <i className="fa fa-exclamation-circle me-2"></i>
                   Sorry, there was an error sending your message. Please try again.
-                  <button 
-                    type="button" 
-                    className="btn-close" 
-                    onClick={() => setSubmitStatus(null)}
-                    aria-label="Close"
-                  >
-                    <i className="fa fa-times"></i>
-                  </button>
                 </div>
               )}
             </div>
