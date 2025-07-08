@@ -17,11 +17,6 @@ export const Contact = (props) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
-  const clearState = () => {
-    setState({ ...initialState });
-    setSubmitStatus(null);
-  };
-  
   
   const handleSubmit = (e) => {
     e.preventDefault();
