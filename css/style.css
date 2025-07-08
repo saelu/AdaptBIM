@@ -591,23 +591,26 @@ header .intro-text {
 }
 #features h3 {
   color: var(--accent);
-  min-height: 56px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  min-height: 36px;
+  display: block;
   text-align: center;
+  margin-bottom: 8px;
 }
 #features i.fa {
   font-size: var(--font-size-hero);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
   transition: all 0.5s;
   color: var(--text-white);
-  width: 100px;
-  height: 100px;
-  padding: 30px 0;
+  width: 80px;
+  height: 80px;
+  padding: 18px 0;
   border-radius: 50%;
   background: linear-gradient(to right, var(--primary) 0%, var(--primary-light) 55%);
   box-shadow: var(--shadow-10soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* About Section */
 #about {
@@ -704,14 +707,17 @@ header .intro-text {
   */
 }
 #services i.fa {
-  font-size: var(--font-size-display);
-  width: 120px;
-  height: 120px;
-  padding: 40px 0;
+  font-size: var(--font-size-hero);
+  width: 80px;
+  height: 80px;
+  padding: 18px 0;
   background: linear-gradient(to right, var(--primary) 0%, var(--primary-light) 55%);
   border-radius: 50%;
   color: var(--text-white);
   box-shadow: var(--shadow-10soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #services h3 {
@@ -751,12 +757,12 @@ header .intro-text {
   padding: 0;
 }
 #testimonials .about-text li:before {
-  content: "\f00c";
-  font-family: var(--font-icon);
+  content: "✓";
   color: var(--primary);
   font-size: var(--font-size-sm);
   font-weight: 300;
   padding-right: 8px;
+  font-family: inherit;
 }
 .testimonial {
   position: relative;
@@ -1660,6 +1666,36 @@ label {
 
 .alert {
   position: relative;
+}
+
+@media (max-width: 767px) {
+  #features i.fa {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    padding: 10px 0;
+    margin-bottom: 8px;
+  }
+  #features h3 {
+    min-height: 24px;
+    margin-bottom: 6px;
+  }
+}
+
+.feature-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  #services i.fa {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    padding: 10px 0;
+  }
 }
 
 
