@@ -118,12 +118,7 @@ export const Navigation = () => {
         {/* Logo Section */}
         <div className="navbar-brand-container">
           <a href="#page-top" className="navbar-brand page-scroll">
-            <picture>
-              <source media="(max-width: 575px)" srcSet="img/logo-large.png" />
-              <source media="(max-width: 991px)" srcSet="img/logo-large.png" />
-              <source media="(min-width: 992px)" srcSet="img/logo-large.png" />
-              <img src="img/logo-large.png" alt="AdaptBIM Logo" className="navbar-logo" />
-            </picture>
+            <img src="/img/logo_main.svg" alt="AdaptBIM Logo" className="navbar-logo" />
           </a>
         </div>
         {/* Desktop Navigation (visible on desktop/tablet only) */}
