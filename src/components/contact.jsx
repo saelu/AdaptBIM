@@ -170,12 +170,12 @@ export const Contact = (props) => {
                 <p>{props.data ? props.data.address1 : "loading"}</p>
               </div>
             </div>
-            {/* <div className="contact-item">
+            <div className="contact-item">
               <span><i className="fa fa-phone"></i> Phone</span>
               <div>
                 {props.data ? props.data.phone : "loading"}
               </div>
-            </div> */}
+            </div>
             <div className="contact-item">
               <span><i className="fa fa-envelope"></i> Email</span>
               <div>
