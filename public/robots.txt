@@ -38,6 +38,12 @@ Disallow: /package.json
 Disallow: /yarn.lock
 Disallow: /package-lock.json
 
+# Block non-existent pages that Google is trying to crawl
+Disallow: /privacy-policy
+Disallow: /about-us
+Disallow: /terms-of-service
+Disallow: /services/
+
 # Allow important files for SEO
 Allow: /robots.txt
 Allow: /sitemap.xml
