@@ -21,8 +21,7 @@
       "build:analyze": "GENERATE_SOURCEMAP=false npm run build && npx webpack-bundle-analyzer build/static/js/*.js",
       "test": "react-scripts test",
       "eject": "react-scripts eject",
-      "optimize-images": "node optimize-images.js",
-      "prebuild": "npm run optimize-images"
+      "optimize-images": "node optimize-images.js"
    },
    "eslintConfig": {
       "extends": "react-app"
