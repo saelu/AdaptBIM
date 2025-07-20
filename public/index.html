@@ -230,6 +230,8 @@
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = href;
+        // Add cache headers
+        link.setAttribute('data-cache', 'max-age=31536000');
         document.head.appendChild(link);
       };
       
@@ -271,6 +273,10 @@
   
   <!-- Add cache control headers -->
   <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+  
+  <!-- Preload critical resources with cache headers -->
+  <link rel="preload" href="img/webp/intro-bgd.webp" as="image" type="image/webp" crossorigin>
+  <link rel="preload" href="img/optimized/intro-bgd.png" as="image" type="image/png" crossorigin>
   
 
   
