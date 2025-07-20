@@ -25,6 +25,8 @@
       --font-primary: 'Open Sans', sans-serif;
       --font-heading: 'Raleway', sans-serif;
       --font-alt: 'Lato', sans-serif;
+      --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      --font-monospace: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
       --font-size-h2: 24px;
       --font-size-h3: 22px;
       --font-size-hero: 38px;
@@ -35,12 +37,17 @@
       font-family: var(--font-primary);
       text-rendering: optimizeLegibility !important;
       -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale;
       color: var(--text-light);
       font-weight: 400;
       width: 100% !important;
       height: 100% !important;
       margin: 0;
       padding: 0;
+    }
+
+    code {
+      font-family: var(--font-monospace);
     }
 
     /* Navigation - Critical for above the fold */
@@ -195,14 +202,45 @@
         padding-top: 150px;
         padding-bottom: 80px;
       }
+      
+      /* Critical mobile responsive styles */
+      body {
+        overflow-x: hidden;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
   </style>
 
   <!-- Defer non-critical CSS -->
-  <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <script>
+    // Load non-critical CSS after page load to avoid render blocking
+    window.addEventListener('load', function() {
+      const loadCSS = (href) => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        document.head.appendChild(link);
+      };
+      
+      // Load Bootstrap CSS
+      loadCSS('css/bootstrap.min.css');
+      // Load main style CSS
+      loadCSS('css/style.css');
+    });
+  </script>
   
-  <!-- Fallback for browsers that don't support preload -->
+  <!-- Fallback for browsers that don't support JavaScript -->
   <noscript>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -234,23 +272,18 @@
   <!-- Add cache control headers -->
   <meta http-equiv="Cache-Control" content="public, max-age=31536000">
   
-  <!-- Register service worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('SW registered: ', registration);
-          })
-          .catch(registrationError => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
-    }
-  </script>
+
   
-  <!-- Performance monitoring -->
-  <script src="performance-monitor.js"></script>
+  <!-- Performance monitoring - load after page load -->
+  <script>
+    // Defer performance monitoring to avoid render blocking
+    window.addEventListener('load', function() {
+      const script = document.createElement('script');
+      script.src = 'performance-monitor.js';
+      script.async = true;
+      document.head.appendChild(script);
+    });
+  </script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -294,6 +327,22 @@
             }, 800);
           }
         });
+      }
+    });
+  </script>
+  
+  <!-- Register service worker - non-blocking -->
+  <script>
+    // Register service worker after page load to avoid blocking
+    window.addEventListener('load', function() {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
       }
     });
   </script>

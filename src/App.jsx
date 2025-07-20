@@ -2,7 +2,6 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import JsonData from "./data/data.json";
-import "./App.css";
 
 // Lazy load non-critical components
 const Welcome = lazy(() => import("./components/welcome").then(module => ({ default: module.Welcome })));
