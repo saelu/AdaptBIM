@@ -18,6 +18,14 @@ export const Header = (props) => {
           </div>
         </div>
       </div>
+      
+      {/* Preload hero background image for LCP optimization */}
+      <link 
+        rel="preload" 
+        as="image" 
+        href="/img/intro-bgd.png"
+        fetchpriority="high"
+      />
     </header>
   );
 };

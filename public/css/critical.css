@@ -1,0 +1,191 @@
+/* Critical CSS - Above the fold styles only */
+:root {
+  --primary: #1a57a2;
+  --primary-light: #6c757D;
+  --accent: #FF8C42;
+  --accent-blue: #608dfd;
+  --accent-blue3: #5ca9fb;
+  --accent-green: #1e7a46;
+  --text-dark: #333;
+  --text-light: #777;
+  --text-white: #fff;
+  --text-white-full: #FFFFFF;
+  --text-white-75: rgba(255, 255, 255, 0.75);
+  --text-white-15: rgba(255, 255, 255, 0.15);
+  --text-white-1: rgba(255, 255, 255, 1);
+  --bg-gray: #e5e5e5;
+  --overlay-dark: rgba(0, 0, 0, 0.2);
+  --font-primary: 'Open Sans', sans-serif;
+  --font-heading: 'Raleway', sans-serif;
+  --font-alt: 'Lato', sans-serif;
+  --font-size-h2: 24px;
+  --font-size-h3: 22px;
+  --font-size-hero: 38px;
+  --font-size-p: 17px;
+}
+
+body, html {
+  font-family: var(--font-primary);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: var(--text-light);
+  font-weight: 400;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation - Critical for above the fold */
+#menu {
+  background: var(--primary);
+  width: 100%;
+  min-height: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+  padding: 0 24px;
+}
+
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-logo {
+  display: block;
+  width: auto;
+  max-height: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+.custom-navbar-desktop {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: none;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.custom-navbar-desktop li {
+  display: block;
+}
+
+.custom-navbar-desktop li > a {
+  color: var(--text-white-full);
+  font-family: var(--font-alt);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 18px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  border-radius: 0;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+  display: block;
+}
+
+.custom-navbar-desktop li > a:hover,
+.custom-navbar-desktop li > a:focus {
+  color: var(--accent);
+}
+
+/* Header Section - Critical for LCP */
+.intro {
+  display: table;
+  width: 100%;
+  padding: 0;
+  background: url(../img/webp/intro-bgd.webp) center center no-repeat;
+  background-color: var(--bg-gray);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  min-height: 100vh;
+}
+
+@supports not (background-image: url(../img/webp/intro-bgd.webp)) {
+  .intro {
+    background: url(../img/optimized/intro-bgd.png) center center no-repeat;
+  }
+}
+
+.intro .overlay {
+  background: var(--overlay-dark);
+}
+
+.intro .aec {
+  color: var(--accent);
+}
+
+.intro h1 {
+  font-family: var(--font-heading);
+  color: var(--text-white);
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.intro h1 span {
+  font-weight: 800;
+  color: var(--text-white);
+}
+
+header .intro-text {
+  padding-top: 350px;
+  padding-bottom: 200px;
+  text-align: right;
+}
+
+/* Mobile responsive critical styles */
+@media (max-width: 767px) {
+  .custom-navbar-desktop {
+    display: none;
+  }
+  
+  .intro h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  header .intro-text {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .intro h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  header .intro-text {
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+} 

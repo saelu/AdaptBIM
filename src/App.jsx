@@ -1,24 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
-import { Features } from "./components/features";
-import { About } from "./components/about";
-import { Services } from "./components/services";
-import { Testimonials } from "./components/testimonials";
-import { Contact } from "./components/contact";
-import { Welcome } from "./components/welcome";
 import JsonData from "./data/data.json";
-import SmoothScroll from "smooth-scroll";
 import "./App.css";
 
-
-export const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  speedAsDuration: true,
-});
+// Lazy load non-critical components
+const Welcome = lazy(() => import("./components/welcome").then(module => ({ default: module.Welcome })));
+const About = lazy(() => import("./components/about").then(module => ({ default: module.About })));
+const Services = lazy(() => import("./components/services").then(module => ({ default: module.Services })));
+const Features = lazy(() => import("./components/features").then(module => ({ default: module.Features })));
+const Testimonials = lazy(() => import("./components/testimonials").then(module => ({ default: module.Testimonials })));
+const Contact = lazy(() => import("./components/contact").then(module => ({ default: module.Contact })));
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
+  
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
@@ -27,12 +23,16 @@ const App = () => {
     <div>
       <Navigation />
       <Header data={landingPageData.Header} />
-      <Welcome data={landingPageData.Welcome} />
-      <About data={landingPageData.About} />
-      <Services data={landingPageData.Services} />
-      <Features data={landingPageData.Features} />
-      <Testimonials data={landingPageData.Testimonials} />
-      <Contact data={landingPageData.Contact} />
+      
+      {/* Lazy load non-critical sections */}
+      <Suspense fallback={<div style={{ height: '100px' }}></div>}>
+        <Welcome data={landingPageData.Welcome} />
+        <About data={landingPageData.About} />
+        <Services data={landingPageData.Services} />
+        <Features data={landingPageData.Features} />
+        <Testimonials data={landingPageData.Testimonials} />
+        <Contact data={landingPageData.Contact} />
+      </Suspense>
     </div>
   );
 };
