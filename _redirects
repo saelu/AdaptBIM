@@ -1,0 +1,14 @@
+# Cache static assets
+/css/* cache-control=public, max-age=31536000, immutable
+/js/* cache-control=public, max-age=31536000, immutable
+/img/* cache-control=public, max-age=31536000, immutable
+*.js cache-control=public, max-age=31536000, immutable
+*.css cache-control=public, max-age=31536000, immutable
+*.png cache-control=public, max-age=31536000, immutable
+*.jpg cache-control=public, max-age=31536000, immutable
+*.jpeg cache-control=public, max-age=31536000, immutable
+*.webp cache-control=public, max-age=31536000, immutable
+*.svg cache-control=public, max-age=31536000, immutable
+
+# Handle React Router (if using client-side routing)
+/*    /index.html   200 
