@@ -390,17 +390,17 @@
     }
   </style>
 
-  <!-- Load non-critical CSS immediately to prevent layout shifts -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Load CSS with optimized loading -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
+  <link rel="stylesheet" href="css/style.css" media="all">
   
 
 
-  <!-- Optimize Google Fonts loading -->
+  <!-- Optimize Google Fonts loading - consolidated -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lato:wght@400;700&family=Raleway:wght@300;400;500;600;700;800;900&display=swap&text=EMPOWERINGAECEPCBIMSOLUTIONS"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lato:wght@400;700&family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   >
   
@@ -412,11 +412,31 @@
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   
-  <!-- Font Awesome with optimized loading -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  </noscript>
+  <!-- Critical resource loading strategy -->
+  <script>
+    // Prioritize critical resources
+    const criticalResources = [
+      '/img/webp/intro-bgd.webp',
+      '/css/bootstrap.min.css',
+      '/css/style.css'
+    ];
+    
+    // Preload critical resources
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      if (resource.includes('.css')) {
+        link.as = 'style';
+      } else if (resource.includes('.webp') || resource.includes('.png')) {
+        link.as = 'image';
+        link.setAttribute('fetchpriority', 'high');
+      }
+      document.head.appendChild(link);
+    });
+  </script>
+  
+
 
   <title>AdaptBIM | Your Vision, Our Code</title>
   <meta name="description" content="Empowering AEC and EPC with our Tailored BIM Solutions" />
@@ -429,29 +449,32 @@
   <link rel="preload" href="img/webp/intro-bgd.webp" as="image" type="image/webp" crossorigin fetchpriority="high">
   <link rel="preload" href="img/optimized/intro-bgd.png" as="image" type="image/png" crossorigin fetchpriority="high">
   
-  <!-- Preload fonts to prevent layout shifts -->
-  <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wWw.woff2" as="font" type="font/woff2" crossorigin>
+
   
 
   
   <!-- Font loading optimization -->
   <script>
-    // Prevent layout shifts from font loading
+    // Prevent layout shifts from font loading - simplified
     if ('fonts' in document) {
-      // Load fonts with specific sizes to match actual usage
+      // Load only the most critical fonts first
       Promise.all([
         document.fonts.load('400 15px Lato'),
-        document.fonts.load('700 24px Raleway'),
-        document.fonts.load('700 22px Raleway'),
-        document.fonts.load('400 17px Open Sans'),
-        document.fonts.load('300 17px Open Sans'),
-        document.fonts.load('600 17px Open Sans'),
-        document.fonts.load('700 17px Open Sans')
+        document.fonts.load('700 24px Raleway')
       ]).then(() => {
         document.documentElement.classList.add('fonts-loaded');
-        console.log('Fonts loaded successfully');
+        console.log('Critical fonts loaded successfully');
+        
+        // Load remaining fonts in background
+        Promise.all([
+          document.fonts.load('400 17px Open Sans'),
+          document.fonts.load('300 17px Open Sans'),
+          document.fonts.load('600 17px Open Sans'),
+          document.fonts.load('700 17px Open Sans'),
+          document.fonts.load('700 22px Raleway')
+        ]).then(() => {
+          console.log('All fonts loaded successfully');
+        });
       }).catch(() => {
         // If fonts fail to load, still mark as loaded to prevent infinite waiting
         document.documentElement.classList.add('fonts-loaded');
@@ -463,24 +486,32 @@
     }
   </script>
   
-  <!-- LCP Image optimization -->
+  <!-- Resource loading optimization -->
   <script>
-    // Ensure LCP image is loaded with high priority
+    // Optimize resource loading to reduce dependency chain
     document.addEventListener('DOMContentLoaded', function() {
+      // Ensure LCP image is loaded with high priority
       const lcpImage = document.querySelector('.intro picture img');
       if (lcpImage) {
-        // Force high priority loading
         lcpImage.setAttribute('fetchpriority', 'high');
         lcpImage.setAttribute('loading', 'eager');
-        
-        // Preload the image
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = lcpImage.src;
-        link.setAttribute('fetchpriority', 'high');
-        document.head.appendChild(link);
       }
+      
+      // Defer non-critical resources
+      const deferResources = () => {
+        // Load Font Awesome after critical content
+        const fontAwesome = document.createElement('link');
+        fontAwesome.rel = 'stylesheet';
+        fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+        fontAwesome.media = 'print';
+        fontAwesome.onload = function() {
+          this.media = 'all';
+        };
+        document.head.appendChild(fontAwesome);
+      };
+      
+      // Defer after a short delay to prioritize critical content
+      setTimeout(deferResources, 100);
     });
   </script>
   
