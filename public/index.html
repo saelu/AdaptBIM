@@ -22,9 +22,9 @@
       --text-white-1: rgba(255, 255, 255, 1);
       --bg-gray: #e5e5e5;
       --overlay-dark: rgba(0, 0, 0, 0.2);
-      --font-primary: 'Open Sans', sans-serif;
-      --font-heading: 'Raleway', sans-serif;
-      --font-alt: 'Lato', sans-serif;
+      --font-primary: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-heading: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-alt: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
       --font-monospace: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
       --font-size-h2: 24px;
@@ -44,6 +44,42 @@
       height: 100% !important;
       margin: 0;
       padding: 0;
+      /* Prevent layout shifts */
+      font-display: swap;
+    }
+
+    /* Prevent layout shifts from font loading */
+    .intro h1 {
+      font-family: var(--font-heading);
+      color: var(--text-white);
+      font-size: var(--font-size-h2);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 60px;
+      /* Reserve space to prevent layout shift */
+      min-height: 1.2em;
+      line-height: 1.2;
+    }
+
+    .custom-navbar-desktop li > a {
+      color: var(--text-white-full);
+      font-family: var(--font-alt);
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 12px 18px;
+      text-decoration: none;
+      background: none;
+      border: none;
+      border-radius: 0;
+      transition: color 0.2s, background 0.2s;
+      position: relative;
+      display: block;
+      /* Reserve space to prevent layout shift */
+      min-height: 1.2em;
+      line-height: 1.2;
     }
 
     code {
@@ -153,16 +189,6 @@
       color: var(--accent);
     }
 
-    .intro h1 {
-      font-family: var(--font-heading);
-      color: var(--text-white);
-      font-size: var(--font-size-h2);
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-top: 0;
-      margin-bottom: 60px;
-    }
-
     .intro h1 span {
       font-weight: 800;
       color: var(--text-white);
@@ -220,33 +246,47 @@
         height: auto;
       }
     }
+
+    /* Font loading optimization */
+    .fonts-loaded .intro h1,
+    .fonts-loaded .custom-navbar-desktop li > a {
+      /* Smooth transition when fonts load */
+      transition: font-family 0.1s ease-in-out;
+    }
+
+    /* Prevent layout shifts during font loading */
+    .intro h1,
+    .custom-navbar-desktop li > a {
+      /* Use system fonts as fallback to prevent layout shift */
+      font-family: var(--font-heading), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    /* Ensure consistent spacing */
+    .intro h1 {
+      margin: 0 0 60px 0;
+      padding: 0;
+    }
+
+    /* Prevent container layout shifts */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* Ensure navigation doesn't shift */
+    .navbar-container {
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+    }
   </style>
 
-  <!-- Defer non-critical CSS -->
-  <script>
-    // Load non-critical CSS after page load to avoid render blocking
-    window.addEventListener('load', function() {
-      const loadCSS = (href) => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = href;
-        // Add cache headers
-        link.setAttribute('data-cache', 'max-age=31536000');
-        document.head.appendChild(link);
-      };
-      
-      // Load Bootstrap CSS
-      loadCSS('css/bootstrap.min.css');
-      // Load main style CSS
-      loadCSS('css/style.css');
-    });
-  </script>
+  <!-- Load non-critical CSS immediately to prevent layout shifts -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
   
-  <!-- Fallback for browsers that don't support JavaScript -->
-  <noscript>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </noscript>
+
 
   <!-- Optimize Google Fonts loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -254,8 +294,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lato:wght@400;700&family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet"
-    media="print"
-    onload="this.media='all'"
   >
   
   <!-- Preconnect to external domains -->
@@ -278,7 +316,36 @@
   <link rel="preload" href="img/webp/intro-bgd.webp" as="image" type="image/webp" crossorigin>
   <link rel="preload" href="img/optimized/intro-bgd.png" as="image" type="image/png" crossorigin>
   
+  <!-- Preload fonts to prevent layout shifts -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wWw.woff2" as="font" type="font/woff2" crossorigin>
+  
 
+  
+  <!-- Font loading optimization -->
+  <script>
+    // Prevent layout shifts from font loading
+    if ('fonts' in document) {
+      Promise.all([
+        document.fonts.load('300 1em Open Sans'),
+        document.fonts.load('400 1em Open Sans'),
+        document.fonts.load('600 1em Open Sans'),
+        document.fonts.load('700 1em Open Sans'),
+        document.fonts.load('400 1em Lato'),
+        document.fonts.load('700 1em Lato'),
+        document.fonts.load('300 1em Raleway'),
+        document.fonts.load('400 1em Raleway'),
+        document.fonts.load('500 1em Raleway'),
+        document.fonts.load('600 1em Raleway'),
+        document.fonts.load('700 1em Raleway'),
+        document.fonts.load('800 1em Raleway'),
+        document.fonts.load('900 1em Raleway')
+      ]).then(() => {
+        document.documentElement.classList.add('fonts-loaded');
+      });
+    }
+  </script>
   
   <!-- Performance monitoring - load after page load -->
   <script>
